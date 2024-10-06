@@ -1,4 +1,5 @@
-# spotify.clone
-this is first clone after completing HTML, CSS and Bootstrap
+# Learning Period
+this is first code after completing HTML, CSS and Bootstrap
 <br/>
-Author - Amit Bhagat(wellbeing)
+i am here to learn how to use git and gitHub
+Author - Amit Bhagat
