@@ -1,32 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Git & Github</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+  </head>
+  <body>
     <h1>For window users</h1>
     <h2>We have to download git bash, begore this we have a github account</h2>
-    <p>Now we can use git any where like command Line or In any code Editor (like VS Code) After this we'll do first thing is configure our git using this</p>
+    <p>
+      Now we can use git any where like command Line or In any code Editor (like
+      VS Code) After this we'll do first thing is configure our git using this
+    </p>
     <h4>git config --global user.name " your Name "</h4>
     <h4>git config --global user.email "your mail@email.com"</h4>
 
-    <p>If we want to check that our email and name is add or not than we can </p>
+    <p>If we want to check that our email and name is add or not than we can</p>
     <h4>git config --list</h4>
 
     <!-- After this we'll learn some basic commands to use github repos in local machine  -->
-     <h2>Clone</h2>
-     <dl>
-        <dt>Clone</dt>
-        <dd>
-            this command is use to cloning repository in local machine we can clone  repo in local machine using this <b>git clone &lt;- repo link -&gt; </b>
-        </dd>
-     
-     <h2>Status</h2>
-      <dt>Status</dt>
-       <dd>This is use to check the status of code</dd>
-    </dl>
-</body>
+    <div>
+      <h3>Clone</h3>
+      <p>
+        this command is use to cloning repository in local machine we can clone
+        repo in local machine using this <b>git clone &lt;- repo link -&gt; </b>
+      </p>
+      <h3>Status</h3>
+      <p>This is use to check the status of code</p>
+      <h4>Here status has four types</h4>
+      <ul>
+        <li>Untracked</li>
+        <li>unmodified</li>
+        <li>modified</li>
+        <li>staged</li>
+      </ul>
+
+      <p>
+        <b>Untracked : </b> means we have created file or repo but we did not
+        add it
+      </p>
+      <p>
+        <b>Unmodified : </b> its the normal form or stage of files. It will not
+        show
+      </p>
+      <p>
+        <b>Modified : </b>when we change something or update in our code it is
+        used to call Modified
+      </p>
+      <p>
+        <b>Staged : </b>its the middle stage of add and commit, it means when we
+        add something then after this there a condition to stage the file
+      </p>
+
+      <!-- After this we have to commit the the added file -->
+
+      <h3>Commit</h3>
+      <p>we'll commit the file using this command</p>
+      <h4>git commit -m "commit name"</h4>
+
+      <!-- After adding commiting the file we'll learn about push-->
+
+      <h3>Push</h3>
+      <p>
+        this is use to push any repo or file from local repo to github by this
+        command
+      </p>
+      <h4>git push origin main</h4>
+
+      <!-- if we want to add all files then we can this at same so we can we thsi command -->
+      <h4>git add .</h4>
+
+      <!-- Now we are moving to init command   -->
+      <h4>init command</h4>
+      <p>
+        this is basically use add new repo form local to remote repo by doing
+        this
+      </p>
+
+      <!-- Add this given lines of  p  in bullet point in this class="bullet-point" -->
+      <div class="bullet-point">
+        <p>
+          So, firstly we have to get access of new repo or existing repo where
+          we want to add new repo
+        </p>
+        <p>we copy https link from the code section and then,</p>
+        <p>apply on this command,</p>
+        <h4>git remote add origin &lt;- Link -&gt;</h4>
+        <p>
+          After that if we want to check that our github repo is accessed or not
+          then we can check by this command,
+        </p>
+        <h4>gir remote -v (here v means verify remote)</h4>
+        <p>
+          After all changes and update we want to add our new repo to github so
+          how can we add, by doing this
+        </p>
+        <h4>git push origin main</h4>
+        <h4>git push -u origin main</h4>
+        <!--here when we use this u it means first time we told that it my initialise value after this we need not use origin main again and again-->
+      </div>
+      <!-- Now we moved to git branch -->
+      <h3>Git Branch</h3>
+      <p>so we'll learn about branches in git or github and how do we use it</p>
+      <ul>
+        <h4>git branch</h4>
+        <p>this is use to check that in which branch that we are</p>
+
+        <h4>git branch -M branch name</h4>
+        <p>this is use to to rename our branch</p>
+
+        <h4>git checkout &lt;- brach name -&gt;</h4>
+        <p>it use to navigate on branch form one branch to another branch</p>
+
+        <h4>git checkout -b &lt;- new branch name -&gt;</h4>
+        <p>it is use to create a new branch in repo</p>
+
+        <h4>git branch -d &lt;- branch name -&gt;</h4>
+        <p>it is use to delete the branch</p>
+      </ul>
+       
+      <!-- Now we going to marge the branches each other  -->
+       <h2>Merge Branches</h2>
+       <p>there are two way to merge the branches</p>
+       <ol>
+           <li>Manually from github</li>
+        <li>By using command and code</li>
+       </ol>
+       <h3>PR : Pull request</h3>
+       <p>when we go to  github there is option show where is pull request we go on there and do all step by step</p>
+
+       <h3>Merge code</h3>
+
+       <p>if we want to compare our code from one branch to another branch</p>
+       <h4> git diff&lt;- branch name -&gt;</h4>
+
+       <p>for mergin two branches so use this</p>
+       <h4>git merge &lt;- branch name -&gt;</h4>
+       <p>then we push the code to uor main branch</p>
+       <h4>git push origin main</h4>
+
+       <p>sometimes there is a situation when change anything in code at two  different branch then we merge twins code then our code gonna CONFLICT and not add</p>
+       <p>So we have to change it</p>
+    </div>
+  </body>
 </html>
